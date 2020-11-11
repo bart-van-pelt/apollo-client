@@ -1,0 +1,13 @@
+<p>exchangerates works!</p>
+
+<div *ngIf="loading">
+    Loading...
+  </div>
+  <div *ngIf="error">
+    Error :( {{error}} )
+  </div>
+  <div *ngIf="rates">
+    <div *ngFor="let rate of rates">
+      <p>{{ rate.currency }}: {{ rate.rate }}</p>
+    </div>
+  </div>
